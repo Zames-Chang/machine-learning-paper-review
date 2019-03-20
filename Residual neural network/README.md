@@ -41,7 +41,11 @@ F只有一層，方程<br>
 <img src="http://latex.codecogs.com/gif.latex?y = Wx + x = (W+1)x" /><br>
 ，是沒意義的。
 注意到，雖然上述符號是關於完全連接的層為簡單起見，它們適用於<br>
-卷積層。 函數F（x，{Wi}）可以表示多個卷積層。 每個元素的加法是在兩個特徵映射上每個通道執行的。
+卷積層。 函數F（x，{Wi}）可以表示多個卷積層。 每個元素的加法是在兩個特徵映射上每個通道執行的。\
+#### Residual neural network 如何解決梯度消失
+因為當w(x)+b 趨近於零時，仍然可以透過+x這個操作讓他不至於梯度消失。
+![](https://i.imgur.com/pGz4x25.png)<br>
+參考自deeplearning.ai
 ### 4. 模型運算邏輯
 左邊是普通的cnn 右邊是 Residual neural network 版本的cnn，簡單來說就是把Convlution前的結果+回到output
 <img src="images/arg.png"/><br>
