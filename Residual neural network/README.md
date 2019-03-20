@@ -37,11 +37,10 @@
 三層，而更多的層是可能的。 但如果<br>
 F只有一層，方程<br>
 <img src="http://latex.codecogs.com/gif.latex?y = F(x,{W{i}}) + x" /><br>
-類似於線性層：<br>
-<img src="http://latex.codecogs.com/gif.latex?y = F(x, {W{i}}) + W{s}x" /><br>
-，是沒意義的。<br>
-我們還注意到，雖然上述符號是關於<br>
-完全連接的層為簡單起見，它們適用於<br>
+因為他會類似於線性層：<br>
+<img src="http://latex.codecogs.com/gif.latex?y = Wx + x = (W+1)x" /><br>
+，是沒意義的。
+注意到，雖然上述符號是關於完全連接的層為簡單起見，它們適用於<br>
 卷積層。 函數F（x，{Wi}）可以表示多個卷積層。 每個元素的加法是在兩個特徵映射上每個通道執行的。
 ### 4. 模型運算邏輯
 左邊是普通的cnn 右邊是 Residual neural network 版本的cnn，簡單來說就是把Convlution前的結果+回到output
