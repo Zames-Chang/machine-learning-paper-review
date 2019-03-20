@@ -15,7 +15,9 @@
 具有兩層，F =W2σ（W1x），其中σ表示<br>
 為了簡化符號，省略了ReLU 和bias的操作F + x由方式執行<br>
 連接和元素添加。 我們採用加法後的第二個非線性（即σ（y））。<br>
-方程<img src="http://latex.codecogs.com/gif.latex?y = F(x,{W{i}}) + x" />中的快捷方式連接既不引入額外參數也不引入計算複雜性。 這不僅僅是<br>
+方程<br>
+<img src="http://latex.codecogs.com/gif.latex?y = F(x,{W{i}}) + x" /><br>
+中的快捷方式連接既不引入額外參數也不引入計算複雜性。 這不僅僅是<br>
 在實踐中有吸引力，但在比較中也很重要<br>
 普通和剩餘網絡之間。 我們可以公平地比較同時擁有的普通/殘餘網絡<br>
 相同數量的參數，深度，寬度和計算成本（除了可忽略的元素加法）。<br>
@@ -24,16 +26,22 @@
 通道），我們可以執行Ws的線性投影<br>
 用於匹配維度的快捷方式連接：<br>
 <img src="http://latex.codecogs.com/gif.latex?y = F(x, {W{i}}) + W{sx.}" /><br>
-我們也可以在方程<img src="http://latex.codecogs.com/gif.latex?y = F(x,{W{i}}) + x" />中使用Ws。 
-但論文中的實驗表明，理想映射<img src="http://latex.codecogs.com/gif.latex?y = F(x,{W{i}}) + x" />就足夠了
-解決梯度消失
-因此Ws僅在匹配尺寸時使用。
-殘餘函數F的形式是靈活的。 本文中的實驗涉及具有兩個或兩個的函數F.
-三層（圖5），而更多的層是可能的。 但如果
-F只有一層，方程<img src="http://latex.codecogs.com/gif.latex?y = F(x,{W{i}}) + x" />類似於線性層：
-<img src="http://latex.codecogs.com/gif.latex?y = F(x, {W{i}}) + W{sx.}" />，是沒意義的。
-我們還注意到，雖然上述符號是關於
-完全連接的層為簡單起見，它們適用於
+我們也可以在方程<br>
+<img src="http://latex.codecogs.com/gif.latex?y = F(x,{W{i}}) + x" /><br>
+中使用Ws(一個轉換維度的操作)。<br>
+但論文中的實驗表明，理想映射<br>
+<img src="http://latex.codecogs.com/gif.latex?y = F(x,{W{i}}) + x" />就足夠了<br>
+解決梯度消失<br>
+因此Ws僅在匹配尺寸時使用。<br>
+殘餘函數F的形式是靈活的。 本文中的實驗涉及具有兩個或兩個的函數F.<br>
+三層，而更多的層是可能的。 但如果<br>
+F只有一層，方程<br>
+<img src="http://latex.codecogs.com/gif.latex?y = F(x,{W{i}}) + x" /><br>
+類似於線性層：<br>
+<img src="http://latex.codecogs.com/gif.latex?y = F(x, {W{i}}) + W{sx.}" /><br>
+，是沒意義的。<br>
+我們還注意到，雖然上述符號是關於<br>
+完全連接的層為簡單起見，它們適用於<br>
 卷積層。 函數F（x，{Wi}）可以表示多個卷積層。 每個元素的加法是在兩個特徵映射上每個通道執行的。
 ### 4. 模型運算邏輯
 左邊是普通的cnn 右邊是 Residual neural network 版本的cnn，簡單來說就是把Convlution前的結果+回到output
