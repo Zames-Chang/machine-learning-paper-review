@@ -38,7 +38,7 @@
 F只有一層，方程<br>
 <img src="http://latex.codecogs.com/gif.latex?y = F(x,{W{i}}) + x" /><br>
 類似於線性層：<br>
-<img src="http://latex.codecogs.com/gif.latex?y = F(x, {W{i}}) + W{sx.}" /><br>
+<img src="http://latex.codecogs.com/gif.latex?y = F(x, {W{i}}) + W{s}x" /><br>
 ，是沒意義的。<br>
 我們還注意到，雖然上述符號是關於<br>
 完全連接的層為簡單起見，它們適用於<br>
