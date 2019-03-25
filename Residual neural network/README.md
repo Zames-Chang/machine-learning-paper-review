@@ -7,7 +7,7 @@
 深度學習可以有效的fit非常複雜的系統，但是有一個問題是當模型深度過深的時候常常會梯度消失，為此Residual neural network要解決的就是這個問題。<br>
 他解決的方式是利用把中間filter產生的結果加到後面的輸出中，使其就算發生梯度消失的問題也可以保有原本的輸入值，不會使後面的連接層全部梯度消失。
 ### 3. 數學
-對每個stack of layers 使用 Residual Learning 整個construction如圖所示。在本文中，形式正式每一個block定義為：<br>
+對每個stack of layers 使用 Residual Learning 的方法如圖所示。在本文中，形式正式每一個block定義為：<br>
 <img src="images/model.png"/><br>
 <img src="http://latex.codecogs.com/gif.latex?y = F(x,{W{i}}) + x" /><br>
 這裡x和y是所考慮的input layer 的 input 和 output vector。 函數F（x,{Wi}）表示要 learning 的 Residual projection。 以圖中為例<br>
