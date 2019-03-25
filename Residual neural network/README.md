@@ -10,7 +10,7 @@
 對每個stack of layers 使用 Residual Learning 的方法如圖所示。在本文中，形式正式每一個block定義為：<br>
 <img src="images/model.png"/><br>
 <img src="http://latex.codecogs.com/gif.latex?y = F(x,{W{i}}) + x" /><br>
-這裡x和y是所考慮的input layer 的 input 和 output vector。 函數F（x,{Wi}）表示要 learning 的 Residual projection。 以圖中為例，就是一個兩層的結構，F =W2σ（W1x），其中以σ作為表示<br>。
+這裡x和y是所考慮的input layer 的 input 和 output vector。 函數F（x,{Wi}）表示要 learning 的 Residual projection。 以圖中為例，就是一個兩層的結構，F =W2σ（W1x），其中以σ作為表示。<br>
 為了簡化符號，省略了ReLU 和bias的操作F + x由方式執行 connection 和 element add。 採用加法後的第二個非線性（即σ（y））。
 #### Equation<br>
 <img src="http://latex.codecogs.com/gif.latex?y = F(x,{W{i}}) + x" /><br>
