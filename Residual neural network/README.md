@@ -10,18 +10,17 @@
 對每個stack of layers 使用 Residual Learning 的方法如圖所示。在本文中，形式正式每一個block定義為：<br>
 <img src="images/model.png"/><br>
 <img src="http://latex.codecogs.com/gif.latex?y = F(x,{W{i}}) + x" /><br>
-這裡x和y是所考慮的input layer 的 input 和 output vector。 函數F（x,{Wi}）表示要 learning 的 Residual projection。 以圖中為例，就是一個兩層的結構，F =W2σ（W1x），其中以σ作為表示<br>
+這裡x和y是所考慮的input layer 的 input 和 output vector。 函數F（x,{Wi}）表示要 learning 的 Residual projection。 以圖中為例，就是一個兩層的結構，F =W2σ（W1x），其中以σ作為表示<br>。
 為了簡化符號，省略了ReLU 和bias的操作F + x由方式執行 connection 和 element add。 採用加法後的第二個非線性（即σ（y））。
 #### Equation<br>
 <img src="http://latex.codecogs.com/gif.latex?y = F(x,{W{i}}) + x" /><br>
-這種連接方式既不引入額外 parameters 也不引入多的 complexity 。 這不僅僅是在implement中有吸引力，在比較中也很重要<br>
-DNN 和 Residual neural network 之間。 可以公平地比較同時擁有的DNN/Residual neural network相同數量的參數，深度，寬度和計算成本（除了可忽略的元素加法）。(但是公式中x和F的尺寸必須相等。如果不是這種情況（例如，在改變輸入/輸出時）Channels），可以用 Ws 的 linear projection <br>
-但論文中的實驗表明，ideal projection <br>
-<img src="http://latex.codecogs.com/gif.latex?y = F(x,{W{i}}) + x" />就足夠了，其他種投射方式效果並沒有比較好<br>
+這種連接方式既不引入額外 parameters 也不引入多的 complexity 。 這不僅僅是在implement中有吸引力，在比較中也很重要。<br>
+DNN 和 Residual neural network 之間。 可以公平地比較同時擁有的DNN/Residual neural network相同數量的參數，深度，寬度和計算成本（除了可忽略的元素加法）。(但是公式中x和F的尺寸必須相等。如果不是這種情況（例如，在改變輸入/輸出時）Channels），可以用 Ws 的 linear projection。 <br>
+但論文中的實驗表明，ideal projection (<img src="http://latex.codecogs.com/gif.latex?y = F(x,{W{i}}) + x" />)就足夠了，其他種投射方式效果並沒有比較好。<br>
 #### 但如果F只有一層，<br>
-<img src="http://latex.codecogs.com/gif.latex?y = F(x,{W{i}}) + x" />因為他會類似於線性層<br>
+<img src="http://latex.codecogs.com/gif.latex?y = F(x,{W{i}}) + x" />因為他會類似於線性層<br>。
 <img src="http://latex.codecogs.com/gif.latex?y = Wx + x = (W+1)x" />是沒意義的。<br>
-雖然上述是以 DNN 為例子是為了簡單起見，但它們也適用於卷積層。 函數F（x，{Wi}）可以表示多個卷積層。 每個元素的加法是在兩個 Featture maps上每個 channels 執行的。
+雖然上述是以 DNN 為例子是為了簡單起見，但它們也適用於卷積層。 函數F（x，{Wi}）可以表示多個卷積層。 每個元素的加法是在兩個 Feature maps上每個 channels 執行的。
 #### Residual neural network 如何解決梯度消失
 因為當w(x)+b 趨近於零時，仍然可以透過+x這個操作讓他不至於梯度消失。
 ![](https://i.imgur.com/pGz4x25.png)<br>
