@@ -7,5 +7,5 @@
 
 ### 結果
 Data set: Mnist(經過 10000 steps)
-<img src="images/loss.png"/><br>
+<img src="img/loss.png"/><br>
 paper: https://www.sciencedirect.com/science/article/pii/S0925231214003658?via%3Dihub
