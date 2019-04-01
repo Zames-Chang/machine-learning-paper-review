@@ -14,6 +14,10 @@ output : 這是一隻黑白相間的鳥<br>
 ### 4. 閱讀後認為可以發展的方向或心得
 google圖片上常常會需要標注這是什麼東西，可能使用者上傳圖片時並沒有特別寫明，這時候就可以透過這個model去這些圖片標注上一些敘述。
 
+### 5. 結果
+Data set: Mnist(經過 10000 steps)
+<img src="images/acc.png"/><br>
+
 ## reference
 paper: https://arxiv.org/abs/1507.05717<br>
 tensorflow sample code

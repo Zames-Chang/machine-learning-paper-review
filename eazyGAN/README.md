@@ -13,6 +13,10 @@
 ### 4. 閱讀後認為可以發展的方向或心得
 他可以去生成一些未看過的資料，之前有一個比較極端的應用，是拿來破解deep learning的辨識系統，假設你現在有一個很準的人臉辨識系統好了，我可以透過訓練一個很厲害的Generator network，他可以去騙過這個人臉辨識系統，讓他以為那是另一個人，這是一個非常可怕的事情，阿里巴巴有人臉辨識付錢，你可以想像假設你可以讓辨識系統以為你是另一個人就會有盜刷的問題。
 
+### 5. 結果
+Data set: Mnist(經過 10000 steps)
+<img src="images/acc.png"/><br>
+
 ## reference
 paper: https://arxiv.org/abs/1406.2661<br>
 參考 midum : https://medium.com/@gau820827/%E6%95%99%E9%9B%BB%E8%85%A6%E7%95%AB%E7%95%AB-%E5%88%9D%E5%BF%83%E8%80%85%E7%9A%84%E7%94%9F%E6%88%90%E5%BC%8F%E5%B0%8D%E6%8A%97%E7%B6%B2%E8%B7%AF-gan-%E5%85%A5%E9%96%80%E7%AD%86%E8%A8%98-tensorflow-python3-dfad71662952

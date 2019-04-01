@@ -24,6 +24,10 @@ bidirecrion RNN 是一個很相對RNN記憶性比較好的model。<br>
 ### 5. 閱讀後認為可以發展的方向或心得<br>
 可以用於一前面的資料與後面的資料都對於預測結果有重大影響時使用<br>
 
+### 6.表現
+Data Set: Mnist(經過10000 steps後的準確率)
+<img src="images/acc.png"/><br>
+
 ## reference
 paper: https://arxiv.org/abs/1602.04874<br>
 RNN example :https://github.com/aymericdamien/TensorFlow-Examples

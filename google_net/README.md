@@ -18,6 +18,10 @@ google net 有別於一般的卷積神經網路，它採用兩種的圖像處理
 本次一樣使用mnist dataset 所以 loss funtion與傳統的交叉商，透過3個google cell 出來的結果，把它攤平之後接兩層dense，所得到的結果經過softmax交叉商。
 ### 4. 閱讀後認為可以發展的方向或心得
 絕大多數的圖片可以先嘗試不使用傳統的conv，可以直接使用google net，他可以直接產生大量的filter，可以不需要為conv的參數做太多的考慮也可以有不錯的結果。相比於傳統的conv。不過參數會指數成長，所以若計算資源不夠的話可能先不要嘗試，或著不要疊太深。
+### 5. 結果
+Data set: Mnist(經過 10000 steps)
+<img src="images/acc.png"/><br>
+
 ## reference
 paper: https://arxiv.org/abs/1409.4842<br>
 tensorflow sample code
