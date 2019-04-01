@@ -26,7 +26,7 @@ bidirecrion RNN 是一個很相對RNN記憶性比較好的model。<br>
 
 ### 6.表現
 Data Set: Mnist(經過10000 steps後的準確率)
-<img src="images/acc.png"/><br>
+<img src="images/loss.png"/><br>
 
 ## reference
 paper: https://arxiv.org/abs/1602.04874<br>
