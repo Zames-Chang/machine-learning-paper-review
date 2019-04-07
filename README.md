@@ -19,7 +19,7 @@ $ python model.py
 ```
 ## accurency base
 ### bidirectionRNN
-<img scr="bidirectionRNN/images/acc.png"/><br>
+<img scr="acc.png"/><br>
 ### crnn
 <img scr="crnn/images/acc.png"/><br>
 ### google net
