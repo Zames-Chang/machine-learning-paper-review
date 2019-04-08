@@ -28,9 +28,10 @@ $ python model.py
 介於 crnn 跟 bidirection 表現之間，有著不錯的收斂速度與泛化能力，但是都沒有 crnn 表現得來的優秀。
 <img src="google_net/images/acc.png"/><br>
 ### Random Forest
-random forest 是很一群決策樹叢集，所以收斂的非常快，也不太會有 nn 收斂時震盪的問題，當然這是因為他本身的參數小，
+random forest 是很一群決策樹叢集，所以收斂的非常快，也不太會有 nn 收斂時震盪的問題，當然這是因為他本身的參數小，可能樹的數量多一點就會有震盪的問題<br>
 <img src="Random Forest/img/acc.png"/><br>
 ### Residual neural network
+效果意外沒有比傳統的 其他 cnn base 的 model 來的好，不過也許可以把 residual 的概念用在譬如說 crnn 中，也許會有不錯的效果。<br>
 <img src="Residual neural network/images/acc.png"/><br>
 ## loss base (unsurpirvise learning)
 ### DeepAutoencoder
