@@ -1,3 +1,5 @@
+import tensorflow as tf
+
 class google_net_cell(object):
     def __init__(self,image_width,image_height,channel):
         self.a = 0
