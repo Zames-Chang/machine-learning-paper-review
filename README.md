@@ -25,6 +25,7 @@ bidirection RNN 與一般的 RNN 不太一樣，他是新建兩個不一樣的 R
 * 因為前後考慮，所以可以很有效地把時序的效果帶出來
 * 不會只依賴前面時序的資料
 * 適合使用在詞彙的填空
+<br>
 缺點：
 * 方向性的特質被消失了，某些資料是有先後順序的異議的(如股票)
 * 訓練成本是一般RNN的兩倍
@@ -36,6 +37,7 @@ crnn 就是把 convolution 的 feature 放入 rnn 做訓練，其中 cnn 跟 rnn
 好處：
 * 有效的抓到圖片的特徵
 * 特別針對有順序的圖片(ex 照片上的地址 由左至右)
+<br>
 缺點：
 * 不適合非圖片的資料，因為非圖片的資料通常並沒有很大數量的feature
 * 卷積去取 feature 很有可能 loss 太多 information
@@ -46,6 +48,7 @@ google net 是一個 residual network，一個非常大的神經網路，google 
 好處：
 * 有效的抓到圖片的特徵
 * 幾乎不用考慮卷積的 hyperparmeter
+<br>
 缺點：
 * 訓練成本非常高
 * 卷積去取 feature 很有可能 loss 太多 information
@@ -58,6 +61,7 @@ Random Forest的基本原理是，結合多顆CART樹（CART樹為使用GINI算�
 * 訓練快速
 * feature 數量並不會影響其效能
 * 準確率高
+<br>
 缺點：
 * 線性的機器學習模型，無法擬和非常複雜的模型
 * 不能做非監督式類型的東西
@@ -71,6 +75,7 @@ random forest 是很一群決策樹叢集，所以收斂的非常快，也不太
 * 不太容易有梯度消失問題
 * 容易擬和函數
 * 準確率高
+<br>
 缺點：
 * 容易 overfitting
 * 模型龐大，難以訓練
