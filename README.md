@@ -2,13 +2,17 @@
 
 
 ## enviroment
+
 ```
 tensorflow 1.1.0 
 ```
+
 ## dataset
+
 ```
 Mnist
 ```
+
 ## Usage
 假設你想要跑 bidirectionRNN
 ```
