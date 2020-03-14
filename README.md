@@ -1,6 +1,5 @@
 # machine-learning-paper-review
-
-
+一個使用 tensorflow 實現一些常見的 deep learning 方法的地方
 ## enviroment
 
 
